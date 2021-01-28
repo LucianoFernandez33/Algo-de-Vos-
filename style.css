@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url(img/card1.jpg);
+    background-size: cover;
+    background-position: 0% -47% ;
+}
+img {
+    width: 12vh;
+    margin-right: 0px!important;
+}
