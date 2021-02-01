@@ -1,10 +1,11 @@
 let carrito = [];
 
 class producto {
-    constructor(nombreProducto, descripProducto, precioProducto, imagenProducto) {
+    constructor(nombreProducto, descripProducto, precioProducto, stockProducto, imagenProducto) {
         this.nombre = nombreProducto;
         this.descripcion = descripProducto;
         this.precio = precioProducto;
+        this.stock = stockProducto;
         this.imagen = imagenProducto;
     }
 }
@@ -13,12 +14,14 @@ let productoUno = new producto (
     "Combo para cumples",
     "Este combo es lo más lindo que vas a ver hoy: vasos, platos, sorbetes!",
     "$ - CONSULTAR",
+    5,
     //img.src = 'img/card1.jpg',
 )
 let productoDos = new producto (
     "Cortinas para cumples",
     "Cortinas en pastel degradé!",
     "$ - CONSULTAR",
+    3,
     //img.src = 'img/cortinas .jpg',
 )
 
@@ -49,5 +52,5 @@ let aux = ``;
             <h2>No tenemos stock</h2>`;
         }
     }
-    
+
     document.getElementById("productos").innerHTML = aux;
