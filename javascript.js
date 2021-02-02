@@ -24,10 +24,30 @@ let productoDos = new producto (
     3,
     //img.src = 'img/cortinas .jpg',
 )
+let productoTres = new producto (
+    "Banderines",
+    "Kit deco fiestas!",
+    "$ - CONSULTAR",
+    1,
+    //img.src = 'img/cortinas .jpg',
+)
+let productoCuatro = new producto (
+    "AMONG US",
+    "una temática que furor en este tiempo: cake topper banderines + imágenes para decorar pochocleritas ",
+    "$ - CONSULTAR",
+    3,
+    //img.src = 'img/cortinas .jpg',
+)
+
+//let imagen1 = new Image(400, 600);
+//imagen1.src = 'img/cortinas.jpg';
+//document.body.appendChild(imagen1);
 
 let baseDeDatos = [
     productoUno,
     productoDos,
+    productoTres,
+    productoCuatro,
 ];
 
 let aux = ``;
@@ -43,7 +63,7 @@ let aux = ``;
             <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href="#" class="btn btn-primary">"${baseDeDatos[i].precio}"</a>
           </div>
         </div>
       </div>`;
