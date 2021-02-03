@@ -15,28 +15,28 @@ let productoUno = new producto (
     "Este combo es lo más lindo que vas a ver hoy: vasos, platos, sorbetes!",
     "$ - CONSULTAR",
     5,
-    //img.src = 'img/card1.jpg',
+    "img/card1.jpg",
 )
 let productoDos = new producto (
     "Cortinas para cumples",
     "Cortinas en pastel degradé!",
     "$ - CONSULTAR",
     3,
-    //img.src = 'img/cortinas .jpg',
+    "img/cortinas.jpg",
 )
 let productoTres = new producto (
     "Banderines",
     "Kit deco fiestas!",
     "$ - CONSULTAR",
     1,
-    //img.src = 'img/cortinas .jpg',
+    "img/fiestas.jpg"
 )
 let productoCuatro = new producto (
     "AMONG US",
     "una temática que furor en este tiempo: cake topper banderines + imágenes para decorar pochocleritas ",
     "$ - CONSULTAR",
     3,
-    //img.src = 'img/cortinas .jpg',
+    "img/cumple.jpg",
 )
 
 //let imagen1 = new Image(400, 600);
@@ -57,7 +57,7 @@ let aux = ``;
             aux += `
             <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+          <img class="card-img-top"" src="${baseDeDatos[i].imagen}" alt="">
           <div class="card-body">
             <h4 class="card-title">"${baseDeDatos[i].nombre}"</h4>
             <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
