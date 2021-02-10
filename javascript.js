@@ -144,9 +144,10 @@ let aux = ``;
         }
     }
 
-    document.getElementById("productos").innerHTML = aux;
+    //document.getElementById("productos").innerHTML = aux;
+    $("#productos").html(aux);
 
-    // Funcionamiento del carrito
+                                // Funcionamiento del carrito
     // Agregando productos al carrito
 
     function agregarAlCarrito(producto) {
@@ -163,13 +164,17 @@ let aux = ``;
     function borrarUnProducto() {
         const nuevoCarrito = [];
         for (let i = 0; i < carrito.length; i++) {
-          if (i != 1) {
+          if (i != 0) {
             nuevoCarrito.push(carrito[i]);
           }
         }
         localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
         carrito = nuevoCarrito;
         document.getElementById("contador").innerHTML = carrito.length;
+       // $("contador").html(carrito.length)
       }
 
+      // Vaciar Carrito de compras
+
+    
       
