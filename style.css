@@ -21,3 +21,26 @@ img {
     align-items: flex-end;
     font-size: 10px;
 }
+#contenedor {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#productosSeleccionados img {
+    width: 25vh;
+}
+#contenedor-button {
+    display: block;
+    justify-content: center;
+    align-self: center;
+
+}
+
+#dropdownMenuButton img {
+    width: 5vh;
+}
