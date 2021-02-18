@@ -44,3 +44,20 @@ img {
 #dropdownMenuButton img {
     width: 5vh;
 }
+
+#estiloCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#tituloCarrito {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+}
+#tituloCarrito h1 {
+    font-size: 3rem;
+    padding-top: 10px;
+    color: brown;
+}

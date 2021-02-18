@@ -33,7 +33,7 @@ let productoTres = new Producto (
     "Kit deco fiestas!",
     850,
     1,
-    "img/fiestas.jpg"
+    "img/banderines.jpg"
 )
 let productoCuatro = new Producto (
     "AMONG US",
@@ -125,8 +125,8 @@ let aux = ``;
             aux += `
             <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top"" src="${baseDeDatos[i].imagen}" alt="">
-          <div class="card-body">
+          <img class="card-img-top"" src="${baseDeDatos[i].imagen}" alt="imagen de productos en venta">
+          <div class="card-body" id="estiloCard">
             <h4 class="card-title">"${baseDeDatos[i].nombre}"</h4>
             <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
             <p class="card-text">"$ ${baseDeDatos[i].precio}"</p>
@@ -145,15 +145,16 @@ let aux = ``;
     }
 
     //document.getElementById("productos").innerHTML = aux;
-    $("#productos").html(aux); // utilizando Jquery
+
+    $("#productos").html(aux); // utilizando JQUERY
 
 
     // mostrar cards con productos agregados al carrito en pagina carrito.html
-    let v = ``;
+    let card = ``;
     for (let i = 0; i < carrito.length; i++){
         console.log(carrito[i]);
         if (carrito[i].stock >= 0){
-            v += `
+            card += `
             <div class="row g-0">
       <div class="col-lg-3 col-md-6 mb-4">
         <img src="${carrito[i].imagen}" alt="...">
@@ -166,12 +167,13 @@ let aux = ``;
           <button class="btn btn-primary" onclick='borrarUnProducto()'>Eliminar Producto</button>
         </div>
       </div> 
-    </div>`;
+    </div>
+    <br><br>`;
         } else {
-            v += `
+            card += `
             <h2>No tienes productos seleccionados.</h2>`;
         }
     }
 
-    $("#productosSeleccionados").html(v);
+    $("#productosSeleccionados").html(card); //utilizando JQUERY
    

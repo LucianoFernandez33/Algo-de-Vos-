@@ -5,14 +5,15 @@ let carrito = [];
  function agregarAlCarrito(producto) {
     carrito.push(producto);
     localStorage.setItem("carrito", JSON.stringify(carrito));
-  
+    //suma de precio total por compra
     let aux = 0;
     for (let i = 0; i < carrito.length; i++) {
       aux += carrito[i].precio;
     }
     
     document.getElementById("contador").innerHTML = carrito.length;
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito)); 
+    //document.getElementById("totalCompra").innerHTML = "$ " + aux;
 }
 
 //borrar un producto del carrito
@@ -25,8 +26,8 @@ function borrarUnProducto() {
     }
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
     carrito = nuevoCarrito;
-    //document.getElementById("contador").innerHTML = carrito.length;
-    $("contador").html(carrito.length)
+    document.getElementById("contador").innerHTML = carrito.length;
+    //$("contador").html(carrito.length)
    
   }
 
