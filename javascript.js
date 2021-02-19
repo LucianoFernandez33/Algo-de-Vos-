@@ -124,20 +124,21 @@ let aux = ``;
         if (baseDeDatos[i].stock > 0){
             aux += `
             <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top"" src="${baseDeDatos[i].imagen}" alt="imagen de productos en venta">
-          <div class="card-body" id="estiloCard">
-            <h4 class="card-title">"${baseDeDatos[i].nombre}"</h4>
-            <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
-            <p class="card-text">"$ ${baseDeDatos[i].precio}"</p>
-          </div>
-          <div class="card-footer">
-            <button class="btn btn-primary" onclick='agregarAlCarrito(${JSON.stringify(
-                baseDeDatos[i]
-              )})'>Agregar Al Carrito</button>
-          </div>
-        </div>
-      </div>`;
+                <div class="card h-100">
+                    <img class="card-img-top"" src="${baseDeDatos[i].imagen}" alt="imagen de productos en venta">
+                    <div class="card-body" id="estiloCard">
+                        <h4 class="card-title">"${baseDeDatos[i].nombre}"</h4>
+                        <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
+                        <p class="card-text">"$ ${baseDeDatos[i].precio}"</p>
+                     </div>
+                    <div class="card-footer">
+                         
+                        <button class="btn btn-primary" id="show" onclick='agregarAlCarrito(${JSON.stringify(
+                          baseDeDatos[i]
+                           )})'>Agregar Al Carrito</button>
+                     </div>
+                 </div>
+            </div>`;
         } else {
             aux += `
             <h2>No tenemos stock</h2>`;
@@ -156,18 +157,18 @@ let aux = ``;
         if (carrito[i].stock >= 0){
             card += `
             <div class="row g-0">
-      <div class="col-lg-3 col-md-6 mb-4">
-        <img src="${carrito[i].imagen}" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">"${carrito[i].nombre}"</h5>
-          <p class="card-text">"${carrito[i].descripcion}"</p>
-          <p class="card-text"><small class="text-muted">"${carrito[i].precio}"</small></p>
-          <button class="btn btn-primary" onclick='borrarUnProducto()'>Eliminar Producto</button>
-        </div>
-      </div> 
-    </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="${carrito[i].imagen}" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">"${carrito[i].nombre}"</h5>
+                        <p class="card-text">"${carrito[i].descripcion}"</p>
+                        <p class="card-text"><small class="text-muted">"${carrito[i].precio}"</small></p>
+                        <button class="btn btn-primary" onclick='borrarUnProducto()'>Cancelar Producto</button>
+                    </div>
+                </div> 
+            </div>
     <br><br>`;
         } else {
             card += `
@@ -176,4 +177,29 @@ let aux = ``;
     }
 
     $("#productosSeleccionados").html(card); //utilizando JQUERY
-   
+
+    // mostrar productos de compra en un nuevo nav
+   // let cardDos = ``;
+   // for (let i = 0; i < carrito.length; i++){
+   //     console.log(carrito[i]);
+   //     if (carrito[i].stock >= 0){
+   //         cardDos += `
+   //         <ul class="nav">
+   //         <li class="nav-item">
+   //           
+   //                 <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
+   //                 <div class="card-body">
+   //                     <h5 class="card-title">"${carrito[i].nombre}"</h5>
+   //                     <a href="#" class="btn btn-primary">Go somewhere</a>
+   //                 </div>
+   //             
+   //         </li>
+   //      </ul>`
+   //             ;
+   //     } else {
+   //         cardDos += `
+   //         <h2>No tienes productos seleccionados.</h2>`;
+   //     }
+   // }
+
+   // $("#hover").html(cardDos); //utilizando JQUERY

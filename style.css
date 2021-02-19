@@ -61,3 +61,32 @@ img {
     padding-top: 10px;
     color: brown;
 }
+#mensajeCompra {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(16, 265, 24);
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#containerPopUp {
+  display: none;  
+}
+#containerPopUp #mensajeCompra p {
+    background-color: rgba(256, 256, 256, 0.7);
+    height: 250px;
+    color: rgb(204, 21, 21);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#navVar, #pieDePagina {
+    background-image: url(img/fondo_nav.jpg);
+}
