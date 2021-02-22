@@ -5,7 +5,7 @@ let carrito = [];
   
 //}
   function ocultarTexto(){
-   $("#containerPopUp").fadeOut(3000)
+   $("#containerPopUp").fadeOut(2000)
   }
 
  function agregarAlCarrito(producto) {
@@ -18,7 +18,7 @@ let carrito = [];
       aux += carrito[i].precio;
       
     }
-    $("#containerPopUp").fadeIn(3000, ocultarTexto);
+    $("#containerPopUp").show(ocultarTexto);
     document.getElementById("contador").innerHTML = carrito.length;
     localStorage.setItem("carrito", JSON.stringify(carrito)); 
      
@@ -48,7 +48,8 @@ function borrarUnProducto() {
     carrito = nuevoCarrito;
     sessionStorage.clear();
     document.getElementById("contador").innerHTML = 0;
-    document.getElementById("productosSeleccionados").innerHTML = "Su carrito se encuentra sin productos. Por favor dirigase a la pagina de inicio para continuar comprando. Gracias!"
+    document.getElementById("productosSeleccionados").innerHTML = "";
+    $("#containerMensajeVaciarCarrito").show();
   }
 
 
@@ -60,5 +61,6 @@ function terminarCompra (){
     carrito = nuevoCarrito;
     sessionStorage.clear();
     document.getElementById("contador").innerHTML = 0;
-    document.getElementById("productosSeleccionados").innerHTML = "Compra realizada con éxito! Pronto nos pondremos en contacto con Usted para despachar el / los productos. Gracias por su compra!!"
+    document.getElementById("productosSeleccionados").innerHTML = "";
+    $("#containerMensajeCompra").show();
 };

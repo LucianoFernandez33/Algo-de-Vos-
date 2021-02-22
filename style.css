@@ -79,14 +79,46 @@ img {
   display: none;  
 }
 #containerPopUp #mensajeCompra p {
-    background-color: rgba(256, 256, 256, 0.7);
+    background-color: rgba(256, 256, 256, 0.8);
     height: 250px;
-    color: rgb(204, 21, 21);
+    color: rgb(14, 146, 9);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 10px;
+    border-radius: 50%;
 }
 #navVar, #pieDePagina {
     background-image: url(img/fondo_nav.jpg);
+}
+#containerMensajeVaciarCarrito {
+    display: none;
+}
+#containerMensajeCompra {
+    display: none;
+}
+#mensajeDeCompra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: cornsilk;
+    background-color: blueviolet;
+    height: 20vh;
+    width: 100%;
+}
+#mensajeCancelacionCompra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: cornsilk;
+    background-color: #D7215C;
+    height: 20vh;
+    width: 100%;
+}
+#mensajeDeCompra p {
+    width: 80%;
+    
 }
