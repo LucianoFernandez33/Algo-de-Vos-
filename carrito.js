@@ -1,9 +1,8 @@
 let carrito = []; 
+let sumaPrecio = 0;
 
  // Agregando productos al carrito
-//function mostrarTexto(){
-  
-//}
+
   function ocultarTexto(){
    $("#containerPopUp").fadeOut(2000)
   }
@@ -11,20 +10,24 @@ let carrito = [];
  function agregarAlCarrito(producto) {
     carrito.push(producto);
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    
-    //suma de precio total por compra
-    let aux = 0;
-    for (let i = 0; i < carrito.length; i++) {
-      aux += carrito[i].precio;
-      
-    }
     $("#containerPopUp").show(ocultarTexto);
     document.getElementById("contador").innerHTML = carrito.length;
-    localStorage.setItem("carrito", JSON.stringify(carrito)); 
-     
-    //document.getElementById("totalCompra").innerHTML = "$ " + aux;
+   
+    for (let i = 0; i < carrito.length; i++) {
+      localStorage.setItem("totalCompra", JSON.stringify(sumaPrecio))
+      sumaPrecio += carrito[i].precio;
+     }
+     console.log(sumaPrecio)    
 }
-
+ $("#totalCompra ").html(sumaPrecio); 
+//; 
+//suma de precio total por compra
+//function precioTotal() {
+//    for (let i = 0; i < carrito.length; i++) {
+//     sumaPrecio += carrito[i].precio;
+//    }
+  
+//}
 
 //borrar un producto del carrito
 function borrarUnProducto() {
@@ -40,7 +43,7 @@ function borrarUnProducto() {
    
   }
 
-  $()
+  
   // Vaciar Carrito de compras
   function vaciarCarrito (){ 
     const nuevoCarrito = [];
@@ -55,12 +58,22 @@ function borrarUnProducto() {
 
 // Al terminar la compra se borran los datos del LocalStorage y el numero de productos mostrados en "Carrito de Compras"
 
-function terminarCompra (){
-  const nuevoCarrito = [];
+
+function comprar(){
+    $("#containerModalFormulario").show();
+};
+
+function ocultarFormulario(){
+  $("#containerModalFormulario").fadeOut(1000)
+ };
+
+ function terminarCompra() {
+    const nuevoCarrito = [];
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
     carrito = nuevoCarrito;
     sessionStorage.clear();
+
     document.getElementById("contador").innerHTML = 0;
     document.getElementById("productosSeleccionados").innerHTML = "";
-    $("#containerMensajeCompra").show();
-};
+     $("#containerMensajeCompra").show();
+  };

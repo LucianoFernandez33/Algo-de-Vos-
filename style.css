@@ -61,7 +61,7 @@ img {
     padding-top: 10px;
     color: brown;
 }
-#mensajeCompra {
+#mensajeCompra, #formularioCompra {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(16, 265, 24);
     
@@ -89,6 +89,38 @@ img {
     padding: 10px;
     border-radius: 50%;
 }
+#containerModalFormulario {
+    z-index: 6;
+    height: 50vh;
+    display: none;
+}
+
+#formularioCompra {
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#containerModalFormulario #formularioCompra p{
+    background-color: rgba(256, 256, 256, 0.8);
+    color: rgb(5, 8, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+#containerModalFormulario #formularioCompra label {
+    color: rgb(182, 71, 216);
+    text-align: center;
+}
+#containerModalFormulario #formularioCompra input{
+    
+}
+#buttonCancelarCompra {
+    align-self: flex-end;
+}
+
 #navVar, #pieDePagina {
     background-image: url(img/fondo_nav.jpg);
 }

@@ -1,3 +1,11 @@
+//fetch("/datos.json")
+//  .then((respuestaServer) => {
+//    return respuestaServer.json();
+//  })
+//  .then((valorDelServer) => {
+ //   console.log(valorDelServer);
+ // }).catch(Error => console.log(Error));
+
 
 if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
@@ -5,35 +13,40 @@ if (localStorage.getItem("carrito") != null) {
   }
 
 class Producto {
-    constructor(nombreProducto, descripProducto, precioProducto, stockProducto, imagenProducto) {
+    constructor(nombreProducto, descripProducto, precioProducto, stockProducto, imagenProducto, idProducto) {
         this.nombre = nombreProducto;
         this.descripcion = descripProducto;
         this.precio = precioProducto;
         this.stock = stockProducto;
         this.imagen = imagenProducto;
+        this.id = idProducto;
     }
 }
 
 let productoUno = new Producto (
-    "Combo para cumples",
-    "Este combo es lo más lindo que vas a ver hoy: vasos, platos, sorbetes!",
-    900,
-    5,
-    "img/card1.jpg",
-)
-let productoDos = new Producto (
     "Cortinas para cumples",
     "Cortinas en pastel degradé!",
     300,
     3,
     "img/cortinas.jpg",
+    "cortinas",
+    
+)
+let productoDos = new Producto (
+    "Combo para cumples",
+    "Este combo es lo más lindo que vas a ver hoy: vasos, platos, sorbetes!",
+    900,
+    5,
+    "img/card1.jpg",
+    "comboCumples",
 )
 let productoTres = new Producto (
     "Banderines",
     "Kit deco fiestas!",
     850,
     1,
-    "img/banderines.jpg"
+    "img/banderines.jpg",
+    "banderines",
 )
 let productoCuatro = new Producto (
     "AMONG US",
@@ -41,6 +54,7 @@ let productoCuatro = new Producto (
     1100,
     3,
     "img/cumple.jpg",
+    "amongus",
 )
 
 let productoCinco = new Producto (
@@ -48,7 +62,8 @@ let productoCinco = new Producto (
     "Súper lindas y delicadas para decorar tus tortas",
     150,
     10,
-    "img/velas.jpg"
+    "img/velas.jpg",
+    "velas",
 )
 let productoSeis = new Producto (
     "Fotolibro",
@@ -56,6 +71,7 @@ let productoSeis = new Producto (
     1500,
     5,
     "img/fotolibro.jpeg",
+    "fotolibro",
 )
 
 let productoSiete = new Producto (
@@ -64,6 +80,7 @@ let productoSiete = new Producto (
     1300,
     3,
     "img/pizarras.jpeg",
+    "pizarras",
 )
 
 let productoOcho = new Producto (
@@ -72,6 +89,7 @@ let productoOcho = new Producto (
     500,
     2,
     "img/tiktok.jpeg",
+    "tiktok",
 )
 let productoNueve = new Producto (
     "Kit de Cumple",
@@ -79,6 +97,7 @@ let productoNueve = new Producto (
     1600,
     1,
     "img/combo-cumple.jpeg",
+    "kitCumple",
 )
 let productoDiez = new Producto (
     "Caketoppers",
@@ -86,6 +105,7 @@ let productoDiez = new Producto (
     1350,
     1,
     "img/animales.jpeg",
+    "caketoppers",
 )
 
 let productoOnce = new Producto (
@@ -94,6 +114,7 @@ let productoOnce = new Producto (
     450,
     2,
     "img/letras.jpeg",
+    "imanes",
 )
 let productoDoce = new Producto (
     "Etiquetas Personalizadas",
@@ -101,6 +122,7 @@ let productoDoce = new Producto (
     550,
     4,
     "img/tarjetas.jpeg",
+    "etiquetas",
 )
 
 let baseDeDatos = [
@@ -164,7 +186,8 @@ let aux = ``;
                     <div class="card-body">
                         <h5 class="card-title">"${carrito[i].nombre}"</h5>
                         <p class="card-text">"${carrito[i].descripcion}"</p>
-                        <p class="card-text"><small class="text-muted">"${carrito[i].precio}"</small></p>
+                        <p class="card-text"><small class="text-muted">"$ ${carrito[i].precio}"</small></p>
+                        <p class="card-text" id="zzz">"${baseDeDatos[i].id}"</p>
                         <button class="btn btn-primary" onclick='borrarUnProducto()'>Cancelar Producto</button>
                     </div>
                 </div> 
@@ -178,6 +201,7 @@ let aux = ``;
 
     $("#productosSeleccionados").html(card); //utilizando JQUERY
 
+    
     // mostrar productos de compra en un nuevo nav
    // let cardDos = ``;
    // for (let i = 0; i < carrito.length; i++){
@@ -203,3 +227,7 @@ let aux = ``;
    // }
 
    // $("#hover").html(cardDos); //utilizando JQUERY
+
+
+   // La más mejor
+
