@@ -1,11 +1,36 @@
 .jumbotron {
-    background-image: url(img/card1.jpg);
+    background-image: url(img/img_fondo.jpg);
     background-size: cover;
     background-position: 0% -47% ;
+}
+.jumbotron h1{
+    font-weight: 400;
+}
+.jumbotron p {
+    color: deeppink;
+    font-weight: normal;
 }
 img {
     width: 12vh;
     margin-right: 0px!important;
+}
+#buttonConocenos {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    background-color: blueviolet;
+    border-color: blueviolet;
+    color: cornsilk;
+    width: max-content;
+}
+#buttonConocenos:hover{
+    background-color: pink;
+    color:blueviolet;
+    border-color: pink;
+}
+#navVar, #pieDePagina {
+    background-image: url(img/fondo_nav.jpg);
 }
 #redesSociales {
     display: flex;
@@ -30,37 +55,98 @@ img {
     flex-direction: column;
     
 }
-
 #productosSeleccionados img {
     width: 25vh;
+}
+#footerCardInicio {
+    display: flex;
+    justify-content: center;
+}
+#show {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 23px;
+    background-color: blueviolet;
+    border-color: blueviolet;
+    color: cornsilk;
+    width: max-content;
+}
+#show:hover {
+    background-color: pink;
+    color:blueviolet;
+    border-color: pink;
 }
 #contenedor-button {
     display: block;
     justify-content: center;
     align-self: center;
-
 }
 
 #dropdownMenuButton img {
     width: 5vh;
 }
-
+/*  estilos de carrito.html     */
 #estiloCard {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+#estiloCardBodyCarrito {
+    padding: 0px;
+    padding-top: 5px;
+    text-align: center;
+}
 #tituloCarrito {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 #tituloCarrito h1 {
     font-size: 3rem;
     padding-top: 10px;
     color: brown;
 }
+
+#hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buttonCancelarCompra {
+    align-self: flex-end;
+}
+#positionButton {
+    display: flex;
+    align-self: flex-end;
+    width: max-content;
+    align-items: center;
+    height: 23px;
+    background-color: white;
+    color: violet;
+    border-color: violet;
+}
+#positionButton:hover{
+    background-color: rgb(228, 48, 48);
+    color: rgba(256, 256, 256, 0.8);
+}
+#positionImg {
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width:480px) {
+    #positionImg {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*-- estilos del popup de mensaje de producto agregado al carrito--*/
+
 #mensajeCompra, #formularioCompra {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(16, 265, 24);
@@ -89,6 +175,19 @@ img {
     padding: 10px;
     border-radius: 50%;
 }
+
+/* estilo card de productos agregados en carrito.html  */
+
+#cardStyle {
+    margin: 0px;
+    margin-bottom: 15px;
+}
+#cardStyleColumn {
+    max-width: 40%;
+}
+
+/*-- estilos del formulario de pago de producto comprado--*/
+
 #containerModalFormulario {
     z-index: 6;
     height: 50vh;
@@ -114,16 +213,7 @@ img {
     color: rgb(182, 71, 216);
     text-align: center;
 }
-#containerModalFormulario #formularioCompra input{
-    
-}
-#buttonCancelarCompra {
-    align-self: flex-end;
-}
 
-#navVar, #pieDePagina {
-    background-image: url(img/fondo_nav.jpg);
-}
 #containerMensajeVaciarCarrito {
     display: none;
 }
@@ -152,5 +242,5 @@ img {
 }
 #mensajeDeCompra p {
     width: 80%;
-    
 }
+

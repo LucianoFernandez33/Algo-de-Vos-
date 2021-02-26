@@ -43,6 +43,7 @@
       </div>
     </div>
   </nav>
+  
   <section id="tituloCarrito">
     <h1>Carrito de compras</h1>
     
@@ -50,10 +51,10 @@
 
   <!-- cards para mostrar productos agregados en el carrito -->
   <div id="contenedor">
-      <div class="card mb-3" style="max-width: 640px;" id="productosSeleccionados">
+        <div class="row row-cols-1 row-cols-md-1 g-4" id="productosSeleccionados">
+
+        </div>
         
-        
-      </div>
       <div id="containerMensajeCompra">
           <div id="mensajeDeCompra"> 
             <p>"Compra realizada con éxito! Pronto nos pondremos en contacto con Usted para despachar el / los productos. Gracias por su compra!!"</p>
@@ -67,49 +68,13 @@
       <div id="contenedor-button">
         <h6 >Precio Total de compra: <strong id="totalCompra"> </strong> </h6>
         <button class="btn btn-primary" onclick="vaciarCarrito()">Vaciar Carrito</button>
-        <button class="btn btn-primary" onclick="comprar()">Comprar</button>
+        <a href="formularioCompra.html"><button class="btn btn-primary" onclick="comprar()">Continuar compra</button></a>
       </div>   
   </div>
   <!-- Formulario con display=none, con accion de ejecutarse con onclick="comprar()" en button comprar -->
+
   
-  <div id="containerModalFormulario">
-    <div class="alert alert-secondary" role="alert" id="formularioCompra">
-      <form action="">
-        <label for="">Nombre Completo <br>
-            <input type="text" placeholder="Nombre" required></label>
-        <input type="text" placeholder="Apellido" required><br>
-        <label for="">Email <br>
-            <input type="email" placeholder="ejemplo@ejemplo.com" required></label>
-        <label for="">Número de Celular <br>
-            <input type="number"></label><br>
-        <label for="">Dirección <br>
-            <input type="text" required></label>
-        <label for="">Numero de casa o dpto <br>
-            <input type="number" required></label><br>
-        <select class="form-select" aria-label="Default select example" required>
-            <option selected>Seleccione tipo de Tarjeta</option>
-            <option value="1" >Visa Débito</option>
-            <option value="2">Visa Crédito</option>
-            <option value="3">MasterCard</option>
-            <option value="4">AmericanExpress</option>
-            <option value="5">MercadoPago</option>
-        </select><br>
-        <label for="" >Número de Tarjeta <br>
-            <input type="number" required></label>
-        <label for="">Código de seg. de la tarjeta <br>
-            <input type="number" required></label><br>
-        <label for="exampleFormControlTextarea1" class="form-label">Comentario y/o información adicional</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <p>Precio Total a abonar $ <strong></strong></p>
-        <div class="col-12">
-            <button class="btn btn-primary" type="" onclick="terminarCompra()">Comprar</button>
-        </div>
-      </form>
-      <div id="buttonCancelarCompra">
-          <button class="btn btn-primary" type="" onclick="ocultarFormulario()">Cancelar Compra</button>
-      </div>
-    </div>
-  </div>
+  
 
 <!-- Footer -->
 <footer class="py-5 bg-dark" id="pieDePagina">

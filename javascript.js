@@ -1,10 +1,10 @@
-//fetch("/datos.json")
-//  .then((respuestaServer) => {
-//    return respuestaServer.json();
-//  })
-//  .then((valorDelServer) => {
- //   console.log(valorDelServer);
- // }).catch(Error => console.log(Error));
+fetch("datos.json")
+  .then((respuestaServer) => {
+    return respuestaServer.json();
+  })
+  .then((valorDelServer) => {
+    console.log(valorDelServer);
+  }).catch(Error => console.log(Error));
 
 
 if (localStorage.getItem("carrito") != null) {
@@ -153,8 +153,7 @@ let aux = ``;
                         <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
                         <p class="card-text">"$ ${baseDeDatos[i].precio}"</p>
                      </div>
-                    <div class="card-footer">
-                         
+                    <div class="card-footer" id="footerCardInicio">
                         <button class="btn btn-primary" id="show" onclick='agregarAlCarrito(${JSON.stringify(
                           baseDeDatos[i]
                            )})'>Agregar Al Carrito</button>
@@ -178,56 +177,51 @@ let aux = ``;
         console.log(carrito[i]);
         if (carrito[i].stock >= 0){
             card += `
-            <div class="row g-0">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <img src="${carrito[i].imagen}" alt="...">
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="cardStyle">
+        <div class="col" id="cardStyleColumn">
+            <div class="card" id="positionImg">
+                <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
+                <div class="card-body" id="estiloCardBodyCarrito">
+                    <h5 class="card-title">${carrito[i].nombre}</h5>
+                    <p class="card-text">${carrito[i].descripcion}</p>
                 </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">"${carrito[i].nombre}"</h5>
-                        <p class="card-text">"${carrito[i].descripcion}"</p>
-                        <p class="card-text"><small class="text-muted">"$ ${carrito[i].precio}"</small></p>
-                        <p class="card-text" id="zzz">"${baseDeDatos[i].id}"</p>
-                        <button class="btn btn-primary" onclick='borrarUnProducto()'>Cancelar Producto</button>
-                    </div>
-                </div> 
+                <div class="card-body" id="estiloCardBodyCarrito">
+                    <p class="card-text"><small class="text-muted">Precio del Producto $ ${carrito[i].precio}</small></p>
+                    <p class="card-text" id="zzz">"${baseDeDatos[i].id}"</p>
+                </div>
+                <button class="btn btn-primary" id="positionButton" onclick='borrarUnProducto()'>Cancelar Producto</button>
             </div>
-    <br><br>`;
-        } else {
-            card += `
-            <h2>No tienes productos seleccionados.</h2>`;
+        </div>
+    </div>`;
+    } else {
+    card += `
+    <h2>No tienes productos seleccionados.</h2>`;
         }
     }
-
     $("#productosSeleccionados").html(card); //utilizando JQUERY
 
     
     // mostrar productos de compra en un nuevo nav
    // let cardDos = ``;
-   // for (let i = 0; i < carrito.length; i++){
-   //     console.log(carrito[i]);
-   //     if (carrito[i].stock >= 0){
-   //         cardDos += `
-   //         <ul class="nav">
-   //         <li class="nav-item">
-   //           
-   //                 <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
-   //                 <div class="card-body">
-   //                     <h5 class="card-title">"${carrito[i].nombre}"</h5>
-   //                     <a href="#" class="btn btn-primary">Go somewhere</a>
-   //                 </div>
-   //             
-   //         </li>
-   //      </ul>`
-   //             ;
-   //     } else {
-   //         cardDos += `
-   //         <h2>No tienes productos seleccionados.</h2>`;
-   //     }
-   // }
+    //for (let i = 0; i < carrito.length; i++){
+    //    console.log(carrito[i]);
+    //    if (carrito[i].stock >= 0){
+    //        cardDos += `
+    //        <div class="card" style="width: 15rem;">
+    //            <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
+    //            <div class="card-body">
+    //                <h5 class="card-title">"${carrito[i].nombre}"</h5>
+    //                <p class="card-text">"${carrito[i].descripcion}"</p>
+    //                <a href="#" class="btn btn-primary">Go somewhere</a>
+    //            </div>
+    //         </div>  `
+    //            ;
+    //    } else {
+    //        cardDos += `
+    //        <h2>No tienes productos seleccionados.</h2>`;
+    //    }
+    //}
 
-   // $("#hover").html(cardDos); //utilizando JQUERY
+    //$("#hover").html(cardDos); //utilizando JQUERY
 
-
-   // La más mejor
-
+    
