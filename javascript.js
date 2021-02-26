@@ -149,9 +149,9 @@ let aux = ``;
                 <div class="card h-100">
                     <img class="card-img-top"" src="${baseDeDatos[i].imagen}" alt="imagen de productos en venta">
                     <div class="card-body" id="estiloCard">
-                        <h4 class="card-title">"${baseDeDatos[i].nombre}"</h4>
+                        <h4 class="card-title">${baseDeDatos[i].nombre}</h4>
                         <p class="card-text">"${baseDeDatos[i].descripcion}"</p>
-                        <p class="card-text">"$ ${baseDeDatos[i].precio}"</p>
+                        <p class="card-text">$ ${baseDeDatos[i].precio}</p>
                      </div>
                     <div class="card-footer" id="footerCardInicio">
                         <button class="btn btn-primary" id="show" onclick='agregarAlCarrito(${JSON.stringify(

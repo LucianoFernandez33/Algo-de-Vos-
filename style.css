@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 .jumbotron {
     background-image: url(img/img_fondo.jpg);
     background-size: cover;
@@ -13,6 +14,9 @@
 img {
     width: 12vh;
     margin-right: 0px!important;
+}
+.display-3 {
+    font-family: 'Architects Daughter', cursive;
 }
 #buttonConocenos {
     display: flex;
@@ -184,6 +188,11 @@ img {
 }
 #cardStyleColumn {
     max-width: 40%;
+}
+@media (max-width:480px) {
+    #cardStyleColumn {
+        max-width: 100%;
+    }
 }
 
 /*-- estilos del formulario de pago de producto comprado--*/
