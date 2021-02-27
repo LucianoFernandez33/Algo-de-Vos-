@@ -1,11 +1,11 @@
-fetch("datos.json")
-  .then((respuestaServer) => {
-    return respuestaServer.json();
-  })
-  .then((valorDelServer) => {
-    console.log(valorDelServer);
-  }).catch(Error => console.log(Error));
-
+//fetch("datos.json")
+//  .then((respuestaServer) => {
+//    return respuestaServer.json();
+//  })
+//.then((valorDelServer) => {
+//    console.log(valorDelServer);
+//  }).catch(Error => console.log(Error));
+//$(document).ready(function(e))
 
 if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
@@ -142,7 +142,7 @@ let baseDeDatos = [
 // mostrar cards de productos en pagina de inicio index.html
 let aux = ``;
     for (let i = 0; i < baseDeDatos.length; i++){
-        console.log(baseDeDatos[i]);
+        //console.log(baseDeDatos[i]);
         if (baseDeDatos[i].stock > 0){
             aux += `
             <div class="col-lg-3 col-md-6 mb-4">

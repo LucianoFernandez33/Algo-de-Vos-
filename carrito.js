@@ -34,6 +34,7 @@ function borrarUnProducto() {
         nuevoCarrito.push(carrito[i]);
       }
     }
+      
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
     carrito = nuevoCarrito;
     document.getElementById("contador").innerHTML = carrito.length;

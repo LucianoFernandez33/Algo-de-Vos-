@@ -253,3 +253,66 @@ img {
     width: 80%;
 }
 
+/*  estilos formulario de contacto */
+#containerTitulo {
+    margin-top: 25px;
+}
+#containerFormUno{
+    width: 100%;
+    padding-left: 10px;
+}
+
+#floatingInput {
+    width: 70%;
+}
+.form-floating {
+    width: 50%;
+    margin-right: 30px;
+}
+#containerFormDos, #containerFormTres, #containerFormCuatro, #containerDatosTarjeta{
+    width: 80%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+#checkTarjeta {
+    width: 100%;
+    padding-left: 10px;
+}
+#vencimientoTarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+.inputVencimiento {
+    width: 20%;
+    margin-right: 20px;
+    text-align: center;
+    padding: 0px;
+}
+#columnVencimientoTarjeta {
+    display: flex;
+    flex-direction: row;
+}
+#containerButton {
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width:480px) {
+    #formularioCompraProducto {
+        display: flex;
+        flex-direction: column;
+    }
+    #containerFormDos, #containerFormTres  {
+        width: 100%;
+    }
+    #containerFormCuatro, #containerDatosTarjeta{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-floating {
+        width: 100%;
+        padding-right: 10px;
+}
+
