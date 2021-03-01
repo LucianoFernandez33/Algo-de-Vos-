@@ -52,26 +52,3 @@ function borrarUnProducto() {
     document.getElementById("productosSeleccionados").innerHTML = "";
     $("#containerMensajeVaciarCarrito").show();
   }
-
-
-// Al terminar la compra se borran los datos del LocalStorage y el numero de productos mostrados en "Carrito de Compras"
-
-
-function comprar(){
-    $("#containerModalFormulario").show();
-};
-
-function ocultarFormulario(){
-  $("#containerModalFormulario").fadeOut(1000)
- };
-
- function terminarCompra() {
-    const nuevoCarrito = [];
-    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-    carrito = nuevoCarrito;
-    sessionStorage.clear();
-
-    document.getElementById("contador").innerHTML = 0;
-    document.getElementById("productosSeleccionados").innerHTML = "";
-     $("#containerMensajeCompra").show();
-  };

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 .jumbotron {
-    background-image: url(img/img_fondo.jpg);
+    background-image: url(../img/img_fondo.jpg);
     background-size: cover;
     background-position: 0% -47% ;
 }
@@ -34,7 +34,7 @@ img {
     border-color: pink;
 }
 #navVar, #pieDePagina {
-    background-image: url(img/fondo_nav.jpg);
+    background-image: url(../img/fondo_nav.jpg);
 }
 #redesSociales {
     display: flex;
@@ -226,9 +226,17 @@ img {
 #containerMensajeVaciarCarrito {
     display: none;
 }
-#containerMensajeCompra {
+#containerOculto {
     display: none;
 }
+#containerMensajeCompra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54vh;
+    background-color: whitesmoke;
+}
+
 #mensajeDeCompra {
     display: flex;
     justify-content: center;
@@ -237,7 +245,7 @@ img {
     color: cornsilk;
     background-color: blueviolet;
     height: 20vh;
-    width: 100%;
+    width: 95%;
 }
 #mensajeCancelacionCompra{
     display: flex;
@@ -254,6 +262,20 @@ img {
 }
 
 /*  estilos formulario de contacto */
+
+#sectionFormulario {
+    display: flex;
+    justify-content: center;
+}
+#containerform {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: -webkit-center;
+    background-color: whitesmoke;
+    width: 90%;
+}
 #containerTitulo {
     margin-top: 25px;
 }
@@ -293,10 +315,31 @@ img {
 #columnVencimientoTarjeta {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 #containerButton {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-self: stretch;
+}
+#buttonVolver {
+background: none;
+border: none;
+color: violet;
+}
+#buttonVolver:hover {
+    color: tomato;
+}
+#buttonPagar {
+    background-color: yellowgreen;
+    border: none;
+    color: white;
+    width: 22%;
+}
+#buttonPagar:hover {
+    background-color: violet;
+    border: none;
+    color: rgb(43, 180, 43);
 }
 @media (max-width:480px) {
     #formularioCompraProducto {
@@ -315,4 +358,4 @@ img {
         width: 100%;
         padding-right: 10px;
 }
-
+};

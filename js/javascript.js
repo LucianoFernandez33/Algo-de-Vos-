@@ -1,11 +1,3 @@
-//fetch("datos.json")
-//  .then((respuestaServer) => {
-//    return respuestaServer.json();
-//  })
-//.then((valorDelServer) => {
-//    console.log(valorDelServer);
-//  }).catch(Error => console.log(Error));
-//$(document).ready(function(e))
 
 if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
@@ -200,28 +192,5 @@ let aux = ``;
     }
     $("#productosSeleccionados").html(card); //utilizando JQUERY
 
-    
-    // mostrar productos de compra en un nuevo nav
-   // let cardDos = ``;
-    //for (let i = 0; i < carrito.length; i++){
-    //    console.log(carrito[i]);
-    //    if (carrito[i].stock >= 0){
-    //        cardDos += `
-    //        <div class="card" style="width: 15rem;">
-    //            <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
-    //            <div class="card-body">
-    //                <h5 class="card-title">"${carrito[i].nombre}"</h5>
-    //                <p class="card-text">"${carrito[i].descripcion}"</p>
-    //                <a href="#" class="btn btn-primary">Go somewhere</a>
-    //            </div>
-    //         </div>  `
-    //            ;
-    //    } else {
-    //        cardDos += `
-    //        <h2>No tienes productos seleccionados.</h2>`;
-    //    }
-    //}
-
-    //$("#hover").html(cardDos); //utilizando JQUERY
 
     
