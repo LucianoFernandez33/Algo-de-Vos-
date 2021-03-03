@@ -75,9 +75,13 @@ let error = document.getElementById('error');
         }
         if (segurCode.value === null || segurCode.value ===''){
           mensajeError.push ('Ingresa el código de seguridad de la tarjeta');
-        }
+        } else{
+          aparecerButtonCompra();
+          aparecerMsjValidacion();
+        };
         
         error.innerHTML = mensajeError.join(' , ');
+        
         });
 
   // Al terminar la compra se borran los datos del LocalStorage y el numero de productos mostrados en "Carrito de Compras"
@@ -86,7 +90,15 @@ let error = document.getElementById('error');
     $("#sectionFormulario").fadeOut()
    };
   
-   
+   function aparecerButtonCompra() {
+    $("#buttonPagar").fadeIn()
+    
+   }
+   function aparecerMsjValidacion(){
+    $("#msjValidacionForm").show() 
+   }
+
+
    function terminarCompra() {
       //validarFormulario();  
       const nuevoCarrito = [];

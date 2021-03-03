@@ -320,12 +320,19 @@ img {
     justify-content: center;
 }
 small {
-    color: salmon;
+    color: #bd2130;
     font-size: 11px;
+    background-color: gainsboro;
 }
 #error {
     color: red;
     background-color: bisque;
+}
+#msjValidacionForm{
+    display: none;
+    color: white;
+    background-color: #28a745;
+    margin-top: 10px;
 }
 #containerButton {
     display: flex;
@@ -333,6 +340,14 @@ small {
     align-self: stretch;
     align-items: center;
     height: 9vh;
+}
+.buttonForm {
+    background-color: gainsboro;
+    color: black;
+}
+.buttonForm:hover {
+    background-color: coral;
+    color: cornsilk;
 }
 #buttonVolver {
 background: none;
@@ -344,6 +359,7 @@ height: 4vh;
     color: tomato;
 }
 #buttonPagar {
+    display: none;
     background-color: yellowgreen;
     border: none;
     color: white;

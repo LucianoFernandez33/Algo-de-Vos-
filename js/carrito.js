@@ -11,7 +11,6 @@ function agregarAlCarrito(producto) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     $("#containerPopUp").show(ocultarTexto);
     document.getElementById("contador").innerHTML = carrito.length;
-   
     sumaProductos()     
 }
 
@@ -22,8 +21,7 @@ function sumaProductos() {
      }
     console.log(sumarPrecio)
     localStorage.setItem("totalCompra", JSON.stringify(sumarPrecio));
-    $("#totalCompra ").html(sumarPrecio); 
-    
+    $("#totalCompra").html(sumarPrecio);   
 };
 
 //borrar un producto del carrito
