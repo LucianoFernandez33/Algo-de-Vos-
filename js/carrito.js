@@ -30,8 +30,8 @@ function sumaProductos() {
 function borrarUnProducto() {
     const nuevoCarrito = [];
     for (let i = 0; i < carrito.length; i++) {
-      if (i != 0) {
-        nuevoCarrito.push(carrito[i]);
+      if ($carrito[i].id === cortinas) {
+        $($carrito[i].id).remove(selector);
       }
     }
       

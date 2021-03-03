@@ -65,22 +65,22 @@
         <div id="formularioCompraProducto">
             <div id="containerFormUno">
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput email" placeholder="name@example.com" name="email">
-                    <label for="floatingInput">INGRESE SU CORREO</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="email">INGRESE SU CORREO</label>
                   </div>
             </div>
             <hr>
             <div id="containerFormDos">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingPassword nombre" name="nombre" placeholder="Nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
                     <label for="floatingPassword">NOMBRE</label>
-                    <input type="number" class="form-control" id="floatingPassword dni" name="dni" placeholder="Dni">
+                    <input type="number" class="form-control" id="dni" name="dni" placeholder="Dni">
                     <label for="floatingPassword">DOCUMENTO</label>
                   </div>
                   <div  class="form-floating">
-                    <input type="text" class="form-control" id="floatingPassword apellido" name="apellido" placeholder="Apellido">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
                     <label for="floatingPassword">APELLIDO</label>
-                    <input type="number" class="form-control" id="floatingPassword telefono" name="telefono" placeholder="Teléfono">
+                    <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Teléfono">
                     <label for="floatingPassword">TELÉFONO</label>
                   </div>
             </div>
@@ -148,17 +148,26 @@
               <label for="floatingInput">FECHA DE EXPIRACIÓN</label>
           </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="codSeguridad" name="codSeguridad"  placeholder="3 Dígitos">
+            <input type="number" class="form-control" id="codSeguridad" name="codSeguridad"  placeholder="3 Dígitos" >
             <label for="floatingInput">CÓDIGO DE SEGURIDAD</label>
           </div>
         </div>
         <hr>
-        <div id="containerButton">
-          <button id="buttonVolver">Volver al carrrito</button>
-          <button id="buttonPagar" type="submit" onclick="terminarCompra()">PAGAR</button>
+        <small>POR FAVOR ANTES DE COMPRAR, VERIFIQUE QUE TODOS LOS CAMPOS ESTÉN COMPLETOS Y LOS DATOS SON VÁLIDOS CON EL BOTÓN "VALIDAR DATOS"</small>
+        <div >
+          
+          <button type="reset" class="btn btn-shop">Limpiar Datos</button>
+          <button type="submit" class="btn btn-shop">Validar Datos</button>
+          <div id="error">
+            
+          </div>
         </div>
         <hr>
-    </form>  
+    </form> 
+    <div id="containerButton">
+      <a href="../carrito.html"><button id="buttonVolver">Volver al carrrito</button></a>
+      <button id="buttonPagar" type="submit" onclick="terminarCompra()">PAGAR</button>
+    </div> 
 </section> 
 <section id="containerOculto">
     <div id="containerMensajeCompra">

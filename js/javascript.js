@@ -19,7 +19,7 @@ let productoUno = new Producto (
     "Cortinas para cumples",
     "Cortinas en pastel degradé!",
     300,
-    3,
+    10,
     "img/cortinas.jpg",
     "cortinas",
     
@@ -28,7 +28,7 @@ let productoDos = new Producto (
     "Combo para cumples",
     "Este combo es lo más lindo que vas a ver hoy: vasos, platos, sorbetes!",
     900,
-    5,
+    10,
     "img/card1.jpg",
     "comboCumples",
 )
@@ -36,7 +36,7 @@ let productoTres = new Producto (
     "Banderines",
     "Kit deco fiestas!",
     850,
-    1,
+    10,
     "img/banderines.jpg",
     "banderines",
 )
@@ -44,7 +44,7 @@ let productoCuatro = new Producto (
     "AMONG US",
     "una temática que furor en este tiempo: cake topper banderines + imágenes para decorar pochocleritas ",
     1100,
-    3,
+    30,
     "img/cumple.jpg",
     "amongus",
 )
@@ -61,7 +61,7 @@ let productoSeis = new Producto (
     "Fotolibro",
     "Regalo expecial para el Día de la Madre, Fotolibro de 15x20cm con 20 fotos, frases y espacio para escribirle + tarjeta con 2 chocolates marroc",
     1500,
-    5,
+    10,
     "img/fotolibro.jpeg",
     "fotolibro",
 )
@@ -70,7 +70,7 @@ let productoSiete = new Producto (
     "Pizarras Imantadas",
     "Kit de pizarras imantadas con fibras para dibujar",
     1300,
-    3,
+    10,
     "img/pizarras.jpeg",
     "pizarras",
 )
@@ -79,7 +79,7 @@ let productoOcho = new Producto (
     "TikTok",
     "Las cartas contienen diferentes retos, challenge y desafíos de TikTok",
     500,
-    2,
+    10,
     "img/tiktok.jpeg",
     "tiktok",
 )
@@ -87,7 +87,7 @@ let productoNueve = new Producto (
     "Kit de Cumple",
     " Kit de cumple con motivos de La Granja de Zenon",
     1600,
-    1,
+    10,
     "img/combo-cumple.jpeg",
     "kitCumple",
 )
@@ -95,7 +95,7 @@ let productoDiez = new Producto (
     "Caketoppers",
     "Kit de decoración Animalitos del Bosque",
     1350,
-    1,
+    10,
     "img/animales.jpeg",
     "caketoppers",
 )
@@ -104,7 +104,7 @@ let productoOnce = new Producto (
     "Imánes",
     "Abecedario, vocales, números y signo imántados",
     450,
-    2,
+    10,
     "img/letras.jpeg",
     "imanes",
 )
@@ -112,7 +112,7 @@ let productoDoce = new Producto (
     "Etiquetas Personalizadas",
     "Logo más etiquetas de tu negocio, profesión, etc",
     550,
-    4,
+    10,
     "img/tarjetas.jpeg",
     "etiquetas",
 )
@@ -179,7 +179,7 @@ let aux = ``;
                 </div>
                 <div class="card-body" id="estiloCardBodyCarrito">
                     <p class="card-text"><small class="text-muted">Precio del Producto $ ${carrito[i].precio}</small></p>
-                    <p class="card-text" id="zzz">"${baseDeDatos[i].id}"</p>
+                    <p class="card-text" id="zzz">"${carrito[i].id}"</p>
                 </div>
                 <button class="btn btn-primary" id="positionButton" onclick='borrarUnProducto()'>Cancelar Producto</button>
             </div>
