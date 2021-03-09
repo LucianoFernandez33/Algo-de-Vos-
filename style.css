@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 .jumbotron {
-    background-image: url(../img/img_fondo.jpg);
+    background-image: url(img/img_fondo.jpg);
     background-size: cover;
     background-position: 0% -47% ;
 }
@@ -14,36 +13,6 @@
 img {
     width: 12vh;
     margin-right: 0px!important;
-}
-.display-3 {
-    font-family: 'Architects Daughter', cursive;
-}
-#menuDesplegable {
-    left: -70px;
-    min-width: 13rem;
-    }
-#estiloCardNav {
-    padding: 3px;
-    padding-top: 5px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-}
-#estiloCardNav h5 {
-    font-size: 0.8rem;
-}
-#totalCompra {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 3px;
-    background-color: gainsboro;
-}
-#verCarrito {
-    text-align: center;
-}
-#verCarrito:hover {
-    background-color: coral;
-    color: cornsilk;
 }
 #buttonConocenos {
     display: flex;
@@ -61,7 +30,7 @@ img {
     border-color: pink;
 }
 #navVar, #pieDePagina {
-    background-image: url(../img/fondo_nav.jpg);
+    background-image: url(img/fondo_nav.jpg);
 }
 #redesSociales {
     display: flex;
@@ -216,11 +185,6 @@ img {
 #cardStyleColumn {
     max-width: 40%;
 }
-@media (max-width:480px) {
-    #cardStyleColumn {
-        max-width: 100%;
-    }
-}
 
 /*-- estilos del formulario de pago de producto comprado--*/
 
@@ -253,17 +217,9 @@ img {
 #containerMensajeVaciarCarrito {
     display: none;
 }
-#containerOculto {
+#containerMensajeCompra {
     display: none;
 }
-#containerMensajeCompra {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 54vh;
-    background-color: whitesmoke;
-}
-
 #mensajeDeCompra {
     display: flex;
     justify-content: center;
@@ -272,7 +228,7 @@ img {
     color: cornsilk;
     background-color: blueviolet;
     height: 20vh;
-    width: 95%;
+    width: 100%;
 }
 #mensajeCancelacionCompra{
     display: flex;
@@ -288,131 +244,3 @@ img {
     width: 80%;
 }
 
-/*  estilos formulario de contacto */
-
-#sectionFormulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-#containerform {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: -webkit-center;
-    background-color: whitesmoke;
-    width: 90%;
-}
-#containerTitulo {
-    margin-top: 25px;
-}
-#containerFormUno{
-    width: 100%;
-    padding-left: 10px;
-}
-
-#floatingInput {
-    width: 70%;
-}
-.form-floating {
-    width: 50%;
-    margin-right: 30px;
-}
-#containerFormDos, #containerFormTres, #containerFormCuatro, #containerDatosTarjeta{
-    width: 80%;
-    padding-left: 10px;
-    display: flex;
-    flex-direction: row;
-}
-#checkTarjeta {
-    width: 100%;
-    padding-left: 10px;
-}
-#vencimientoTarjeta {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} 
-.inputVencimiento {
-    width: 20%;
-    margin-right: 20px;
-    text-align: center;
-    padding: 0px;
-}
-#columnVencimientoTarjeta {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-small {
-    color: #bd2130;
-    font-size: 11px;
-    background-color: gainsboro;
-}
-#error {
-    color: red;
-    background-color: bisque;
-}
-#msjValidacionForm{
-    display: none;
-    color: white;
-    background-color: #28a745;
-    margin-top: 10px;
-}
-#containerButton {
-    display: flex;
-    justify-content: space-evenly;
-    align-self: stretch;
-    align-items: center;
-    height: 9vh;
-}
-.buttonForm {
-    background-color: gainsboro;
-    color: black;
-}
-.buttonForm:hover {
-    background-color: coral;
-    color: cornsilk;
-}
-#buttonVolver {
-background: none;
-border: none;
-color: violet;
-height: 4vh;
-}
-#buttonVolver:hover {
-    color: tomato;
-}
-#buttonPagar {
-    display: none;
-    background-color: yellowgreen;
-    border: none;
-    color: white;
-    width: 22%;
-    height: 4vh;
-}
-#buttonPagar:hover {
-    background-color: violet;
-    border: none;
-    color: rgb(43, 180, 43);
-}
-@media (max-width:480px) {
-    #formularioCompraProducto {
-        display: flex;
-        flex-direction: column;
-    }
-    #containerFormDos, #containerFormTres  {
-        width: 100%;
-    }
-    #containerFormCuatro, #containerDatosTarjeta{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .form-floating {
-        width: 100%;
-        padding-right: 10px;
-}
-};

@@ -46,10 +46,10 @@
             <button  class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><img src="../img/carrito.png" alt="">
               <b id="contador"> 0</b>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <!--  <li><a class="dropdown-item" onclick="vaciarCarrito()">Vaciar Carrito</a></li></li>-->
-              <li><a class="dropdown-item" ></a>
-              <li><a class="dropdown-item" href="../carrito.html" >Ver mi carrito</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="menuDesplegable">     
+              <li id="carritoDesplegable"></li> 
+              <li id="totalCompra"></li>      
+              <li><a class="dropdown-item" href="../carrito.html" id="verCarrito" >Ver mi carrito</a></li>
             </ul>
           </div>
         </ul>
@@ -205,8 +205,8 @@
   <!-- JavaScript PROPIO -->
 
   <script src="../js/form.js"></script>
-  
-  
+  <script src="../js/javascript.js"></script>
+  <script src="../js/carrito.js"></script>
 
 </body>
 
