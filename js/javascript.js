@@ -166,7 +166,7 @@ let aux = ``;
     // mostrar cards con productos agregados al carrito en pagina carrito.html
     let card = ``;
     for (let i = 0; i < carrito.length; i++){
-        console.log(carrito[i]);
+        //console.log(carrito[i]);
         if (carrito[i].stock >= 0){
             card += `
     <div class="row row-cols-1 row-cols-md-2 g-4" id="cardStyle">
@@ -195,7 +195,7 @@ let aux = ``;
 // mostrar card en carrito desplegable
     let cardDos = ``;
     for (let i = 0; i < carrito.length; i++){
-        console.log(carrito[i]);
+       // console.log(carrito[i]);
         if (carrito[i].stock >= 0){
             cardDos += `                
                 <div class="card-body" id="estiloCardNav">
