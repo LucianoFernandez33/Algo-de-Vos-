@@ -276,6 +276,7 @@ img {
 }
 #mensajeCancelacionCompra{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -286,6 +287,16 @@ img {
 }
 #mensajeDeCompra p {
     width: 80%;
+}
+.btn-products {
+    display: flex;
+    justify-content: center;
+    color: cornflowerblue;
+    background-color: chocolate;
+}
+.btn-products:hover{
+    text-decoration: none;
+    color: white;
 }
 
 /*  estilos formulario de contacto */

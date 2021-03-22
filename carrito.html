@@ -56,18 +56,19 @@
         <div class="row row-cols-1 row-cols-md-1 g-4" id="productosSeleccionados">
 
         </div>
-        
-      <div id="containerMensajeVaciarCarrito">
-        <div id="mensajeCancelacionCompra"> 
-          <p>"Su carrito se encuentra sin productos. Por favor dirigase a la pagina de inicio para continuar comprando. Gracias!"</p>
-        </div>
+        <div id="containerMensajeVaciarCarrito">
+            <div id="mensajeCancelacionCompra"> 
+                <p>"Usted a cancelado su compra. Por favor dirigase a la pagina de inicio para continuar comprando. Gracias!"</p>
+              <a href="index.html"><button class="btn btn-products">Ver  productos</button></a>  
+            </div>
     </div> 
-      <div id="contenedor-button">
+    <div id="contenedor-button">
         <h6 >Precio Total de compra: <strong id="totalCompraDos"> </strong> </h6>
         <button class="btn btn-primary" onclick="vaciarCarrito()">Vaciar Carrito</button>
         <a href="vistas/formularioCompra.html"><button class="btn btn-primary" onclick="comprar()">Continuar compra</button></a>
-      </div>   
+      </div>  
   </div>
+  <div id="ccc"></div>
   
   
 <!-- Footer -->
@@ -90,7 +91,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- JavaScript PROPIO -->
-  <script src="js/carrito.js"></script>
-  <script src="js/javascript.js"></script>
+  <script defer src="js/carrito.js"></script>
+  <script defer src="js/javascript.js"></script>
 </body>
 </html>

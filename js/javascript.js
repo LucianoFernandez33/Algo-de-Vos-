@@ -1,4 +1,3 @@
-
 if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     document.getElementById("contador").innerHTML = carrito.length;
@@ -21,7 +20,7 @@ let productoUno = new Producto (
     300,
     10,
     "img/cortinas.jpg",
-    "cortinas",
+    01,
     
 )
 let productoDos = new Producto (
@@ -30,7 +29,7 @@ let productoDos = new Producto (
     900,
     10,
     "img/card1.jpg",
-    "comboCumples",
+    02,
 )
 let productoTres = new Producto (
     "Banderines",
@@ -38,7 +37,7 @@ let productoTres = new Producto (
     850,
     10,
     "img/banderines.jpg",
-    "banderines",
+    03,
 )
 let productoCuatro = new Producto (
     "AMONG US",
@@ -46,7 +45,7 @@ let productoCuatro = new Producto (
     1100,
     30,
     "img/cumple.jpg",
-    "amongus",
+    04,
 )
 
 let productoCinco = new Producto (
@@ -55,7 +54,7 @@ let productoCinco = new Producto (
     150,
     10,
     "img/velas.jpg",
-    "velas",
+    05,
 )
 let productoSeis = new Producto (
     "Fotolibro",
@@ -63,7 +62,7 @@ let productoSeis = new Producto (
     1500,
     10,
     "img/fotolibro.jpeg",
-    "fotolibro",
+    06,
 )
 
 let productoSiete = new Producto (
@@ -72,7 +71,7 @@ let productoSiete = new Producto (
     1300,
     10,
     "img/pizarras.jpeg",
-    "pizarras",
+    07,
 )
 
 let productoOcho = new Producto (
@@ -81,7 +80,7 @@ let productoOcho = new Producto (
     500,
     10,
     "img/tiktok.jpeg",
-    "tiktok",
+    08,
 )
 let productoNueve = new Producto (
     "Kit de Cumple",
@@ -89,7 +88,7 @@ let productoNueve = new Producto (
     1600,
     10,
     "img/combo-cumple.jpeg",
-    "kitCumple",
+    09,
 )
 let productoDiez = new Producto (
     "Caketoppers",
@@ -97,7 +96,7 @@ let productoDiez = new Producto (
     1350,
     10,
     "img/animales.jpeg",
-    "caketoppers",
+    10,
 )
 
 let productoOnce = new Producto (
@@ -106,7 +105,7 @@ let productoOnce = new Producto (
     450,
     10,
     "img/letras.jpeg",
-    "imanes",
+    11,
 )
 let productoDoce = new Producto (
     "Etiquetas Personalizadas",
@@ -114,7 +113,7 @@ let productoDoce = new Producto (
     550,
     10,
     "img/tarjetas.jpeg",
-    "etiquetas",
+    12,
 )
 
 let baseDeDatos = [
@@ -132,6 +131,7 @@ let baseDeDatos = [
     productoDoce,  
 ];
 // mostrar cards de productos en pagina de inicio index.html
+
 let aux = ``;
     for (let i = 0; i < baseDeDatos.length; i++){
         //console.log(baseDeDatos[i]);
@@ -157,11 +157,8 @@ let aux = ``;
             <h2>No tenemos stock</h2>`;
         }
     }
-
     //document.getElementById("productos").innerHTML = aux;
-
     $("#productos").html(aux); // utilizando JQUERY
-
 
     // mostrar cards con productos agregados al carrito en pagina carrito.html
     let card = ``;
@@ -179,9 +176,8 @@ let aux = ``;
                 </div>
                 <div class="card-body" id="estiloCardBodyCarrito">
                     <p class="card-text"><small class="text-muted">Precio del Producto $ ${carrito[i].precio}</small></p>
-                    <p class="card-text">"${carrito[i].id}"</p>
                 </div>
-                <button class="btn btn-primary" id="positionButton" onclick='borrarUnProducto()'>Cancelar Producto</button>
+                <button class="btn btn-primary" id="positionButton" onclick='borrarUnProducto(${i})'>Cancelar Producto</button>
             </div>
         </div>
     </div>`;
