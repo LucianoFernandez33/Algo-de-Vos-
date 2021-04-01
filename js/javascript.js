@@ -2,6 +2,8 @@ if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     document.getElementById("contador").innerHTML = carrito.length;
   }
+mostrarCardDos()
+sumaProductos()
 
 class Producto {
     constructor(nombreProducto, descripProducto, precioProducto, stockProducto, imagenProducto, idProducto) {
@@ -130,8 +132,8 @@ let baseDeDatos = [
     productoOnce,
     productoDoce,  
 ];
-// mostrar cards de productos en pagina de inicio index.html
 
+// mostrar cards de productos en pagina de inicio index.html
 let aux = ``;
     for (let i = 0; i < baseDeDatos.length; i++){
         //console.log(baseDeDatos[i]);
@@ -161,34 +163,35 @@ let aux = ``;
     $("#productos").html(aux); // utilizando JQUERY
 
     // mostrar cards con productos agregados al carrito en pagina carrito.html
-    let card = ``;
+let card = ``;
     for (let i = 0; i < carrito.length; i++){
         //console.log(carrito[i]);
         if (carrito[i].stock >= 0){
             card += `
-    <div class="row row-cols-1 row-cols-md-2 g-4" id="cardStyle">
-        <div class="col" id="cardStyleColumn">
-            <div class="card" id="positionImg">
-                <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
-                <div class="card-body" id="estiloCardBodyCarrito">
-                    <h5 class="card-title">${carrito[i].nombre}</h5>
-                    <p class="card-text">${carrito[i].descripcion}</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4" id="cardStyle">
+                <div class="col" id="cardStyleColumn">
+                    <div class="card" id="positionImg">
+                        <img src="${carrito[i].imagen}" class="card-img-top" alt="...">
+                        <div class="card-body" id="estiloCardBodyCarrito">
+                            <h5 class="card-title">${carrito[i].nombre}</h5>
+                            <p class="card-text">${carrito[i].descripcion}</p>
+                        </div>
+                        <div class="card-body" id="estiloCardBodyCarrito">
+                            <p class="card-text"><small class="text-muted">Precio del Producto $ ${carrito[i].precio}</small></p>
+                        </div>
+                        <button class="btn btn-primary" id="positionButton" onclick='borrarUnProducto(${i})'>Cancelar Producto</button>
+                    </div>
                 </div>
-                <div class="card-body" id="estiloCardBodyCarrito">
-                    <p class="card-text"><small class="text-muted">Precio del Producto $ ${carrito[i].precio}</small></p>
-                </div>
-                <button class="btn btn-primary" id="positionButton" onclick='borrarUnProducto(${i})'>Cancelar Producto</button>
-            </div>
-        </div>
-    </div>`;
-    } else {
-    card += `
-    <h2>No tienes productos seleccionados.</h2>`;
+            </div>`;
+        } else {
+            card += `
+            <h2>No tienes productos seleccionados.</h2>`;
         }
     }
-    $("#productosSeleccionados").html(card); //utilizando JQUERY
-    
+$("#productosSeleccionados").html(card); //utilizando JQUERY
+
 // mostrar card en carrito desplegable
+function mostrarCardDos(){
     let cardDos = ``;
     for (let i = 0; i < carrito.length; i++){
        // console.log(carrito[i]);
@@ -198,11 +201,11 @@ let aux = ``;
                     <h5>${carrito[i].nombre}</h5>
                     <p>$ ${carrito[i].precio}</p>
                 </div>`;
-    } else {
-    cardDos += `
-    <h2>No tienes productos seleccionados.</h2>`;
-        }
+        } else {
+            cardDos += `
+            <h2>No tienes productos seleccionados.</h2>`;
+            }
     }
     $("#carritoDesplegable").html(cardDos); //utilizando JQUERY
-
+}
     

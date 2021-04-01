@@ -1,9 +1,10 @@
 let carrito = []; 
 let sumaPrecioProductos = localStorage.getItem('totalCompra');
 
-if (localStorage.getItem('totalCompra') == null){
-  localStorage.getItem('totalCompra').innerHTML = 0;
-}
+//if (localStorage.getItem('totalCompra') == null){
+//  localStorage.getItem('totalCompra').innerHTML = 0;
+//}
+sumaProductos()
 
  // Agregando productos al carrito
 function sumaProductos() {
@@ -26,7 +27,8 @@ function agregarAlCarrito(producto) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     $("#containerPopUp").show(ocultarTexto);
     document.getElementById("contador").innerHTML = carrito.length;
-    sumaProductos()     
+    sumaProductos() 
+    mostrarCardDos()  
 }
 
 
@@ -62,5 +64,7 @@ function borrarUnProducto(i) {
     document.getElementById("contador").innerHTML = 0;
     document.getElementById("productosSeleccionados").innerHTML = "";
     document.getElementById("totalCompraDos").innerHTML =  0 ;
+    document.getElementById("carritoDesplegable").innerHTML = "";
+    document.getElementById("totalCompra").innerHTML =  0 ;
     $("#containerMensajeVaciarCarrito").show();
   }
